@@ -1,8 +1,8 @@
-## Completing the Game {#completing-the-game}
+## Completing the Game
 
 We now have the basic building blocks for our tic-tac-toe game. To have a complete game, we now need to alternate placing "X"s and "O"s on the board, and we need a way to determine a winner.
 
-### Lifting State Up {#lifting-state-up}
+### Lifting State Up
 
 Currently, each Square component maintains the game's state. To check for a winner, we'll maintain the value of each of the 9 squares in one location.
 
@@ -175,20 +175,20 @@ Since the Square components no longer maintain state, the Square components rece
 
 Note how in `handleClick`, we call `.slice()` to create a copy of the `squares` array to modify instead of modifying the existing array. We will explain why we create a copy of the `squares` array in the next section.
 
-### Why Immutability Is Important {#why-immutability-is-important}
+### Why Immutability Is Important
 
 In the previous code example, we suggested that you use the `.slice()` method to create a copy of the `squares` array to modify instead of modifying the existing array. We'll now discuss immutability and why immutability is important to learn.
 
 There are generally two approaches to changing data. The first approach is to *mutate* the data by directly changing the data's values. The second approach is to replace the data with a new copy which has the desired changes.
 
-#### Data Change with Mutation {#data-change-with-mutation}
+#### Data Change with Mutation
 ```javascript
 var player = {score: 1, name: 'Jeff'};
 player.score = 2;
 // Now player is {score: 2, name: 'Jeff'}
 ```
 
-#### Data Change without Mutation {#data-change-without-mutation}
+#### Data Change without Mutation
 ```javascript
 var player = {score: 1, name: 'Jeff'};
 
@@ -201,23 +201,23 @@ var newPlayer = Object.assign({}, player, {score: 2});
 
 The end result is the same but by not mutating (or changing the underlying data) directly, we gain several benefits described below.
 
-#### Complex Features Become Simple {#complex-features-become-simple}
+#### Complex Features Become Simple
 
 Immutability makes complex features much easier to implement. Later in this tutorial, we will implement a "time travel" feature that allows us to review the tic-tac-toe game's history and "jump back" to previous moves. This functionality isn't specific to games -- an ability to undo and redo certain actions is a common requirement in applications. Avoiding direct data mutation lets us keep previous versions of the game's history intact, and reuse them later.
 
-#### Detecting Changes {#detecting-changes}
+#### Detecting Changes
 
 Detecting changes in mutable objects is difficult because they are modified directly. This detection requires the mutable object to be compared to previous copies of itself and the entire object tree to be traversed.
 
 Detecting changes in immutable objects is considerably easier. If the immutable object that is being referenced is different than the previous one, then the object has changed.
 
-#### Determining When to Re-Render in React {#determining-when-to-re-render-in-react}
+#### Determining When to Re-Render in React
 
 The main benefit of immutability is that it helps you build _pure components_ in React. Immutable data can easily determine if changes have been made, which helps to determine when a component requires re-rendering.
 
 You can learn more about `shouldComponentUpdate()` and how you can build *pure components* by reading [Optimizing Performance](/docs/optimizing-performance.html#examples).
 
-### Function Components {#function-components}
+### Function Components
 
 We'll now change the Square to be a **function component**.
 
@@ -243,7 +243,7 @@ We have changed `this.props` to `props` both times it appears.
 >
 >When we modified the Square to be a function component, we also changed `onClick={() => this.props.onClick()}` to a shorter `onClick={props.onClick}` (note the lack of parentheses on *both* sides).
 
-### Taking Turns {#taking-turns}
+### Taking Turns
 
 We now need to fix an obvious defect in our tic-tac-toe game: the "O"s cannot be marked on the board.
 
@@ -344,7 +344,7 @@ class Board extends React.Component {
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/KmmrBy?editors=0010)**
 
-### Declaring a Winner {#declaring-a-winner}
+### Declaring a Winner
 
 Now that we show which player's turn is next, we should also show when the game is won and there are no more turns to make. Copy this helper function and paste it at the end of the file:
 

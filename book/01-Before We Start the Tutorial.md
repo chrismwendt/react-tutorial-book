@@ -1,6 +1,6 @@
 This tutorial doesn't assume any existing React knowledge.
 
-## Before We Start the Tutorial {#before-we-start-the-tutorial}
+## Before We Start the Tutorial
 
 We will build a small game during this tutorial. **You might be tempted to skip it because you're not building games -- but give it a chance.** The techniques you'll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.
 
@@ -17,7 +17,7 @@ The tutorial is divided into several sections:
 
 You don't have to complete all of the sections at once to get the value out of this tutorial. Try to get as far as you can -- even if it's one or two sections.
 
-### What Are We Building? {#what-are-we-building}
+### What Are We Building?
 
 In this tutorial, we'll show how to build an interactive tic-tac-toe game with React.
 
@@ -27,7 +27,7 @@ We recommend that you check out the tic-tac-toe game before continuing with the 
 
 You can close the tic-tac-toe game once you're familiar with it. We'll be starting from a simpler template in this tutorial. Our next step is to set you up so that you can start building the game.
 
-### Prerequisites {#prerequisites}
+### Prerequisites
 
 We'll assume that you have some familiarity with HTML and JavaScript, but you should be able to follow along even if you're coming from a different programming language. We'll also assume that you're familiar with programming concepts like functions, objects, arrays, and to a lesser extent, classes.
 

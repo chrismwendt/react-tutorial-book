@@ -1,8 +1,8 @@
-## Overview {#overview}
+## Overview
 
 Now that you're set up, let's get an overview of React!
 
-### What Is React? {#what-is-react}
+### What Is React?
 
 React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called "components".
 
@@ -48,7 +48,7 @@ JSX comes with the full power of JavaScript. You can put *any* JavaScript expres
 
 The `ShoppingList` component above only renders built-in DOM components like `<div />` and `<li />`. But you can compose and render custom React components too. For example, we can now refer to the whole shopping list by writing `<ShoppingList />`. Each React component is encapsulated and can operate independently; this allows you to build complex UIs from simple components.
 
-### Inspecting the Starter Code {#inspecting-the-starter-code}
+### Inspecting the Starter Code
 
 If you're going to work on the tutorial **in your browser,** open this code in a new tab: **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010)**. If you're going to work on the tutorial **locally,** instead open `src/index.js` in your project folder (you have already touched this file during the [setup](#setup-option-2-local-development-environment)).
 
@@ -62,7 +62,7 @@ By inspecting the code, you'll notice that we have three React components:
 
 The Square component renders a single `<button>` and the Board renders 9 squares. The Game component renders a board with placeholder values which we'll modify later. There are currently no interactive components.
 
-### Passing Data Through Props {#passing-data-through-props}
+### Passing Data Through Props
 
 To get our feet wet, let's try passing some data from our Board component to our Square component.
 
@@ -104,7 +104,7 @@ After: You should see a number in each square in the rendered output.
 
 Congratulations! You've just "passed a prop" from a parent Board component to a child Square component. Passing props is how information flows in React apps, from parents to children.
 
-### Making an Interactive Component {#making-an-interactive-component}
+### Making an Interactive Component
 
 Let's fill the Square component with an "X" when we click it.
 First, change the button tag that is returned from the Square component's `render()` function to this:
@@ -206,7 +206,7 @@ When you call `setState` in a component, React automatically updates the child c
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)**
 
-### Developer Tools {#developer-tools}
+### Developer Tools
 
 The React Devtools extension for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) lets you inspect a React component tree with your browser's developer tools.
 

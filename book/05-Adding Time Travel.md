@@ -1,8 +1,8 @@
-## Adding Time Travel {#adding-time-travel}
+## Adding Time Travel
 
 As a final exercise, let's make it possible to "go back in time" to the previous moves in the game.
 
-### Storing a History of Moves {#storing-a-history-of-moves}
+### Storing a History of Moves
 
 If we mutated the `squares` array, implementing time travel would be very difficult.
 
@@ -42,7 +42,7 @@ history = [
 
 Now we need to decide which component should own the `history` state.
 
-### Lifting State Up, Again {#lifting-state-up-again}
+### Lifting State Up, Again
 
 We'll want the top-level Game component to display a list of past moves. It will need access to the `history` to do that, so we will place the `history` state in the top-level Game component.
 
@@ -228,7 +228,7 @@ At this point, the Board component only needs the `renderSquare` and `render` me
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/EmmOqJ?editors=0010)**
 
-### Showing the Past Moves {#showing-the-past-moves}
+### Showing the Past Moves
 
 Since we are recording the tic-tac-toe game's history, we can now display it to the player as a list of past moves.
 
@@ -295,7 +295,7 @@ For each move in the tic-tac-toe game's history, we create a list item `<li>` wh
 
 Let's discuss what the above warning means.
 
-### Picking a Key {#picking-a-key}
+### Picking a Key
 
 When we render a list, React stores some information about each rendered list item. When we update a list, React needs to determine what has changed. We could have added, removed, re-arranged, or updated the list's items.
 
@@ -331,7 +331,7 @@ If no key is specified, React will present a warning and use the array index as 
 Keys do not need to be globally unique; they only need to be unique between components and their siblings.
 
 
-### Implementing Time Travel {#implementing-time-travel}
+### Implementing Time Travel
 
 In the tic-tac-toe game's history, each past move has a unique ID associated with it: it's the sequential number of the move. The moves are never re-ordered, deleted, or inserted in the middle, so it's safe to use the move index as a key.
 
@@ -429,7 +429,7 @@ If we click on any step in the game's history, the tic-tac-toe board should imme
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**
 
-### Wrapping Up {#wrapping-up}
+### Wrapping Up
 
 Congratulations! You've created a tic-tac-toe game that:
 

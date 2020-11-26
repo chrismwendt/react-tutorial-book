@@ -1,8 +1,8 @@
-## Setup for the Tutorial {#setup-for-the-tutorial}
+## Setup for the Tutorial
 
 There are two ways to complete this tutorial: you can either write the code in your browser, or you can set up a local development environment on your computer.
 
-### Setup Option 1: Write Code in the Browser {#setup-option-1-write-code-in-the-browser}
+### Setup Option 1: Write Code in the Browser
 
 This is the quickest way to get started!
 
@@ -10,7 +10,7 @@ First, open this **[Starter Code](https://codepen.io/gaearon/pen/oWWQNa?editors=
 
 You can now skip the second setup option, and go to the [Overview](#overview) section to get an overview of React.
 
-### Setup Option 2: Local Development Environment {#setup-option-2-local-development-environment}
+### Setup Option 2: Local Development Environment
 
 This is completely optional and not required for this tutorial!
 
@@ -67,6 +67,6 @@ We recommend following [these instructions](https://babeljs.io/docs/editors/) to
 
 </details>
 
-### Help, I'm Stuck! {#help-im-stuck}
+### Help, I'm Stuck!
 
 If you get stuck, check out the [community support resources](/community/support.html). In particular, [Reactiflux Chat](https://discord.gg/reactiflux) is a great way to get help quickly. If you don't receive an answer, or if you remain stuck, please file an issue, and we'll help you out.
