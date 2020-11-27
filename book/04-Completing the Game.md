@@ -75,8 +75,6 @@ Instead, we'll pass down a function from the Board to the Square, and we'll have
   }
 ```
 
->Note
->
 >We split the returned element into multiple lines for readability, and added parentheses so that JavaScript doesn't insert a semicolon after `return` and break our code.
 
 Now we're passing down two props from Board to Square: `value` and `onClick`. The `onClick` prop is a function that Square can call when clicked. We'll make the following changes to Square:
@@ -110,8 +108,6 @@ When a Square is clicked, the `onClick` function provided by the Board is called
 4. Since the Board passed `onClick={() => this.handleClick(i)}` to Square, the Square calls `this.handleClick(i)` when clicked.
 5. We have not defined the `handleClick()` method yet, so our code crashes. If you click a square now, you should see a red error screen saying something like "this.handleClick is not a function".
 
->Note
->
 >The DOM `<button>` element's `onClick` attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could give any name to the Square's `onClick` prop or Board's `handleClick` method, and the code would work the same. In React, it's conventional to use `on[Event]` names for props which represent events and `handle[Event]` for the methods which handle the events.
 
 When we try to click a Square, we should get an error because we haven't defined `handleClick` yet. We'll now add `handleClick` to the Board class:
@@ -239,8 +235,6 @@ We have changed `this.props` to `props` both times it appears.
 
 **[View the full code at this point](https://codepen.io/gaearon/pen/QvvJOv?editors=0010)**
 
->Note
->
 >When we modified the Square to be a function component, we also changed `onClick={() => this.props.onClick()}` to a shorter `onClick={props.onClick}` (note the lack of parentheses on *both* sides).
 
 ### Taking Turns

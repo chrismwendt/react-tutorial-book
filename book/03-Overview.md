@@ -123,8 +123,6 @@ class Square extends React.Component {
 
 If you click on a Square now, you should see an alert in your browser.
 
->Note
->
 >To save typing and avoid the [confusing behavior of `this`](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/), we will use the [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for event handlers here and further below:
 >
 >```javascript{4}
@@ -166,8 +164,6 @@ class Square extends React.Component {
 }
 ```
 
->Note
->
 >In [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), you need to always call `super` when defining the constructor of a subclass. All React component classes that have a `constructor` should start with a `super(props)` call.
 
 Now we'll change the Square's `render` method to display the current state's value when clicked:

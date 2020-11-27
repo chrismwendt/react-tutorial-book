@@ -220,8 +220,6 @@ Finally, we need to move the `handleClick` method from the Board component to th
   }
 ```
 
->Note
->
 >Unlike the array `push()` method you might be more familiar with, the `concat()` method doesn't mutate the original array, so we prefer it.
 
 At this point, the Board component only needs the `renderSquare` and `render` methods. The game's state and the `handleClick` method should be in the Game component.
