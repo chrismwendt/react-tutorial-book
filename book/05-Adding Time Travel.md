@@ -171,18 +171,8 @@ Clicking any of the list item's buttons throws an error because the `jumpTo` met
 
 First, add `stepNumber: 0` to the initial state in Game's `constructor`:
 
-```js{8}
-class Game extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      history: [{
-        squares: Array(9).fill(null),
-      }],
-      stepNumber: 0,
-      xIsNext: true,
-    };
-  }
+```
+add stepNumber
 ```
 
 Next, we'll define the `jumpTo` method in Game to update that `stepNumber`. We also set `xIsNext` to true if the number that we're changing `stepNumber` to is even:
