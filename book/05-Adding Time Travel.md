@@ -288,7 +288,6 @@ Let's `map` over the `history` in the Game's `render` method:
 
 For each move in the tic-tac-toe game's history, we create a list item `<li>` which contains a button `<button>`. The button has a `onClick` handler which calls a method called `this.jumpTo()`. We haven't implemented the `jumpTo()` method yet. For now, we should see a list of the moves that have occurred in the game and a warning in the developer tools console that says:
 
-> Warning:
 > Each child in an array or iterator should have a unique "key" prop. Check the render method of "Game".
 
 Let's discuss what the above warning means.
