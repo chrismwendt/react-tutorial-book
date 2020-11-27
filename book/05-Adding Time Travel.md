@@ -177,21 +177,8 @@ add stepNumber
 
 Next, we'll define the `jumpTo` method in Game to update that `stepNumber`. We also set `xIsNext` to true if the number that we're changing `stepNumber` to is even:
 
-```javascript{5-10}
-  handleClick(i) {
-    // this method has not changed
-  }
-
-  jumpTo(step) {
-    this.setState({
-      stepNumber: step,
-      xIsNext: (step % 2) === 0,
-    });
-  }
-
-  render() {
-    // this method has not changed
-  }
+```commit
+jumpTo
 ```
 
 We will now make a few changes to the Game's `handleClick` method which fires when you click on a square.
