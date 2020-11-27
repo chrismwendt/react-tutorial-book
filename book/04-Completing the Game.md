@@ -40,10 +40,8 @@ In the beginning, we [passed the `value` prop down](#passing-data-through-props)
 
 We will now use the prop passing mechanism again. We will modify the Board to instruct each individual Square about its current value (`'X'`, `'O'`, or `null`). We have already defined the `squares` array in the Board's constructor, and we will modify the Board's `renderSquare` method to read from it:
 
-```javascript{2}
-  renderSquare(i) {
-    return <Square value={this.state.squares[i]} />;
-  }
+```commit
+board prop
 ```
 
 **[Open CodePen at this point](https://codepen.io/gaearon/pen/gWWQPY?editors=0010)**
