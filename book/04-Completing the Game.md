@@ -66,19 +66,8 @@ Now we're passing down two props from Board to Square: `value` and `onClick`. Th
 
 After these changes, the Square component looks like this:
 
-```javascript{1,2,6,8}
-class Square extends React.Component {
-  render() {
-    return (
-      <button
-        className="square"
-        onClick={() => this.props.onClick()}
-      >
-        {this.props.value}
-      </button>
-    );
-  }
-}
+```commit
+use onClick prop
 ```
 
 When a Square is clicked, the `onClick` function provided by the Board is called. Here's a review of how this is achieved:
