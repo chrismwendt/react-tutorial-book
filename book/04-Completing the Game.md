@@ -160,15 +160,8 @@ We now need to fix an obvious defect in our tic-tac-toe game: the "O"s cannot be
 
 We'll set the first move to be "X" by default. We can set this default by modifying the initial state in our Board constructor:
 
-```javascript{6}
-class Board extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-      xIsNext: true,
-    };
-  }
+```commit
+add xIsNext
 ```
 
 Each time a player moves, `xIsNext` (a boolean) will be flipped to determine which player goes next and the game's state will be saved. We'll update the Board's `handleClick` function to flip the value of `xIsNext`:
