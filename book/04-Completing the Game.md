@@ -144,14 +144,8 @@ In React, **function components** are a simpler way to write components that onl
 
 Replace the Square class with this function:
 
-```javascript
-function Square(props) {
-  return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
-    </button>
-  );
-}
+```commit
+function component
 ```
 
 We have changed `this.props` to `props` both times it appears.
