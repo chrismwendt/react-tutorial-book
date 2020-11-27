@@ -23,45 +23,21 @@ This is completely optional and not required for this tutorial!
 This setup requires more work but allows you to complete the tutorial using an editor of your choice. Here are the steps to follow:
 
 1. Make sure you have a recent version of [Node.js](https://nodejs.org/en/) installed.
-2. Follow the [installation instructions for Create React App](/docs/create-a-new-react-app.html#create-react-app) to make a new project.
+2. Add these boilerplate files for a barebones React app:
 
-```bash
-npx create-react-app my-app
+```commit
+barebones create-react-app
 ```
 
-3. Delete all files in the `src/` folder of the new project
+If you run `npm install` then `npm start` in the project folder and open `http://localhost:3000` in the browser, you should see "hello, world".
 
-> Note:
->
->**Don't delete the entire `src` folder, just the original source files inside it.** We'll replace the default source files with examples for this project in the next step.
+3. Add styles and initial React components for the tic-tac-toe board:
 
-```bash
-cd my-app
-cd src
-
-# If you're using a Mac or Linux:
-rm -f *
-
-# Or, if you're on Windows:
-del *
-
-# Then, switch back to the project folder
-cd ..
+```commit
+set up initial board
 ```
 
-4. Add a file named `index.css` in the `src/` folder with [this CSS code](https://codepen.io/gaearon/pen/oWWQNa?editors=0100).
-
-5. Add a file named `index.js` in the `src/` folder with [this JS code](https://codepen.io/gaearon/pen/oWWQNa?editors=0010).
-
-6. Add these three lines to the top of `index.js` in the `src/` folder:
-
-```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-```
-
-Now if you run `npm start` in the project folder and open `http://localhost:3000` in the browser, you should see an empty tic-tac-toe field.
+Now you should see an empty tic-tac-toe field.
 
 We recommend following [these instructions](https://babeljs.io/docs/editors/) to configure syntax highlighting for your editor.
 
