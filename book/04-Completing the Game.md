@@ -178,89 +178,14 @@ Let's also change the "status" text in Board's `render` so that it displays whic
 board status
 ```
 
-After applying these changes, you should have this Board component:
-
-```javascript{6,11-16,29}
-class Board extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-      xIsNext: true,
-    };
-  }
-
-  handleClick(i) {
-    const squares = this.state.squares.slice();
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
-    this.setState({
-      squares: squares,
-      xIsNext: !this.state.xIsNext,
-    });
-  }
-
-  renderSquare(i) {
-    return (
-      <Square
-        value={this.state.squares[i]}
-        onClick={() => this.handleClick(i)}
-      />
-    );
-  }
-
-  render() {
-    const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-
-    return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
-      </div>
-    );
-  }
-}
-```
-
 **[Open CodePen at this point](https://codepen.io/gaearon/pen/KmmrBy?editors=0010)**
 
 ### Declaring a Winner
 
 Now that we show which player's turn is next, we should also show when the game is won and there are no more turns to make. Copy this helper function and paste it at the end of the file:
 
-```javascript
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
-}
+```commit
+add calculateWinner
 ```
 
 Given an array of 9 squares, this function will check for a winner and return `'X'`, `'O'`, or `null` as appropriate.
