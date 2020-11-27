@@ -192,18 +192,8 @@ Given an array of 9 squares, this function will check for a winner and return `'
 
 We will call `calculateWinner(squares)` in the Board's `render` function to check if a player has won. If a player has won, we can display text such as "Winner: X" or "Winner: O". We'll replace the `status` declaration in Board's `render` function with this code:
 
-```javascript{2-8}
-  render() {
-    const winner = calculateWinner(this.state.squares);
-    let status;
-    if (winner) {
-      status = 'Winner: ' + winner;
-    } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-    }
-
-    return (
-      // the rest has not changed
+```commit
+call calculateWinner
 ```
 
 We can now change the Board's `handleClick` function to return early by ignoring a click if someone has won the game or if a Square is already filled:
