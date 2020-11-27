@@ -126,32 +126,14 @@ add constructor
 
 Now we'll change the Square's `render` method to display the current state's value when clicked:
 
-* Replace `this.props.value` with `this.state.value` inside the `<button>` tag.
-* Replace the `onClick={...}` event handler with `onClick={() => this.setState({value: 'X'})}`.
-* Put the `className` and `onClick` props on separate lines for better readability.
+```commit
+use state
+```
 
-After these changes, the `<button>` tag that is returned by the Square's `render` method looks like this:
+Put the `className` and `onClick` props on separate lines for better readability:
 
-```javascript{12-13,15}
-class Square extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null,
-    };
-  }
-
-  render() {
-    return (
-      <button
-        className="square"
-        onClick={() => this.setState({value: 'X'})}
-      >
-        {this.state.value}
-      </button>
-    );
-  }
-}
+```commit
+separate lines
 ```
 
 By calling `this.setState` from an `onClick` handler in the Square's `render` method, we tell React to re-render that Square whenever its `<button>` is clicked. After the update, the Square's `this.state.value` will be `'X'`, so we'll see the `X` on the game board. If you click on any Square, an `X` should show up.
