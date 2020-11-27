@@ -174,12 +174,8 @@ With this change, "X"s and "O"s can take turns. Try it!
 
 Let's also change the "status" text in Board's `render` so that it displays which player has the next turn:
 
-```javascript{2}
-  render() {
-    const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-
-    return (
-      // the rest has not changed
+```commit
+board status
 ```
 
 After applying these changes, you should have this Board component:
