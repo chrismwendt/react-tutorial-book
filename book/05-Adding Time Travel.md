@@ -161,17 +161,8 @@ In the tic-tac-toe game's history, each past move has a unique ID associated wit
 
 In the Game component's `render` method, we can add the key as `<li key={move}>` and React's warning about keys should disappear:
 
-```js{6}
-    const moves = history.map((step, move) => {
-      const desc = move ?
-        'Go to move #' + move :
-        'Go to game start';
-      return (
-        <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
-        </li>
-      );
-    });
+```commit
+add key
 ```
 
 **[Open CodePen at this point](https://codepen.io/gaearon/pen/PmmXRE?editors=0010)**
