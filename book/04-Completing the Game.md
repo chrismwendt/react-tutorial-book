@@ -14,18 +14,8 @@ Lifting state into a parent component is common when React components are refact
 
 Add a constructor to the Board and set the Board's initial state to contain an array of 9 nulls corresponding to the 9 squares:
 
-```javascript{2-7}
-class Board extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      squares: Array(9).fill(null),
-    };
-  }
-
-  renderSquare(i) {
-    return <Square value={i} />;
-  }
+```commit
+board constructor
 ```
 
 When we fill the board in later, the `this.state.squares` array will look something like this:
