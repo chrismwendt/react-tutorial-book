@@ -198,18 +198,8 @@ call calculateWinner
 
 We can now change the Board's `handleClick` function to return early by ignoring a click if someone has won the game or if a Square is already filled:
 
-```javascript{3-5}
-  handleClick(i) {
-    const squares = this.state.squares.slice();
-    if (calculateWinner(squares) || squares[i]) {
-      return;
-    }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
-    this.setState({
-      squares: squares,
-      xIsNext: !this.state.xIsNext,
-    });
-  }
+```commit
+ignore clicks if game is over
 ```
 
 **[Open CodePen at this point](https://codepen.io/gaearon/pen/LyyXgK?editors=0010)**
