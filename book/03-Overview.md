@@ -118,23 +118,8 @@ React components can have state by setting `this.state` in their constructors. `
 
 First, we'll add a constructor to the class to initialize the state:
 
-```javascript{2-7}
-class Square extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null,
-    };
-  }
-
-  render() {
-    return (
-      <button className="square" onClick={() => alert('click')}>
-        {this.props.value}
-      </button>
-    );
-  }
-}
+```commit
+add constructor
 ```
 
 > In [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), you need to always call `super` when defining the constructor of a subclass. All React component classes that have a `constructor` should start with a `super(props)` call.
