@@ -83,11 +83,11 @@ pass value
 
 Before:
 
-![React Devtools](../images/tutorial/tictac-empty.png)
+![React Devtools](tictac-empty.png)
 
 After: You should see a number in each square in the rendered output.
 
-![React Devtools](../images/tutorial/tictac-numbers.png)
+![React Devtools](tictac-numbers.png)
 
 **[Open CodePen at this point](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)**
 
