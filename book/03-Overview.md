@@ -104,21 +104,21 @@ onClick
 
 If you click on a Square now, you should see an alert in your browser.
 
->To save typing and avoid the [confusing behavior of `this`](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/), we will use the [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for event handlers here and further below:
+> To save typing and avoid the [confusing behavior of `this`](https://yehudakatz.com/2011/08/11/understanding-javascript-function-invocation-and-this/), we will use the [arrow function syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) for event handlers here and further below:
 >
->```highlight-javascript
-> class Square extends React.Component {
->   render() {
->     return (
->|      <button className="square" onClick={() => alert('click')}>
->         {this.props.value}
->       </button>
->     );
->   }
-> }
->```
+> ```highlight-javascript
+>  class Square extends React.Component {
+>    render() {
+>      return (
+> |      <button className="square" onClick={() => alert('click')}>
+>          {this.props.value}
+>        </button>
+>      );
+>    }
+>  }
+> ```
 >
->Notice how with `onClick={() => alert('click')}`, we're passing *a function* as the `onClick` prop. React will only call this function after a click. Forgetting `() =>` and writing `onClick={alert('click')}` is a common mistake, and would fire the alert every time the component re-renders.
+> Notice how with `onClick={() => alert('click')}`, we're passing *a function* as the `onClick` prop. React will only call this function after a click. Forgetting `() =>` and writing `onClick={alert('click')}` is a common mistake, and would fire the alert every time the component re-renders.
 
 As a next step, we want the Square component to "remember" that it got clicked, and fill it with an "X" mark. To "remember" things, components use **state**.
 
@@ -145,7 +145,7 @@ class Square extends React.Component {
 }
 ```
 
->In [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), you need to always call `super` when defining the constructor of a subclass. All React component classes that have a `constructor` should start with a `super(props)` call.
+> In [JavaScript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes), you need to always call `super` when defining the constructor of a subclass. All React component classes that have a `constructor` should start with a `super(props)` call.
 
 Now we'll change the Square's `render` method to display the current state's value when clicked:
 
