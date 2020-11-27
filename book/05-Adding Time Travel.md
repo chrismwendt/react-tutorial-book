@@ -224,7 +224,7 @@ Finally, we need to move the `handleClick` method from the Board component to th
 
 At this point, the Board component only needs the `renderSquare` and `render` methods. The game's state and the `handleClick` method should be in the Game component.
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/EmmOqJ?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/EmmOqJ?editors=0010)**
 
 ### Showing the Past Moves
 
@@ -284,7 +284,7 @@ Let's `map` over the `history` in the Game's `render` method:
   }
 ```
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/EmmGEa?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/EmmGEa?editors=0010)**
 
 For each move in the tic-tac-toe game's history, we create a list item `<li>` which contains a button `<button>`. The button has a `onClick` handler which calls a method called `this.jumpTo()`. We haven't implemented the `jumpTo()` method yet. For now, we should see a list of the moves that have occurred in the game and a warning in the developer tools console that says:
 
@@ -348,7 +348,7 @@ In the Game component's `render` method, we can add the key as `<li key={move}>`
     });
 ```
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/PmmXRE?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/PmmXRE?editors=0010)**
 
 Clicking any of the list item's buttons throws an error because the `jumpTo` method is undefined. Before we implement `jumpTo`, we'll add `stepNumber` to the Game component's state to indicate which step we're currently viewing.
 
@@ -425,7 +425,7 @@ Finally, we will modify the Game component's `render` method from always renderi
 
 If we click on any step in the game's history, the tic-tac-toe board should immediately update to show what the board looked like after that step occurred.
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/gWWZgR?editors=0010)**
 
 ### Wrapping Up
 

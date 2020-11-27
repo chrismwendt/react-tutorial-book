@@ -56,7 +56,7 @@ We will now use the prop passing mechanism again. We will modify the Board to in
   }
 ```
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/gWWQPY?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/gWWQPY?editors=0010)**
 
 Each Square will now receive a `value` prop that will either be `'X'`, `'O'`, or `null` for empty squares.
 
@@ -163,7 +163,7 @@ class Board extends React.Component {
 }
 ```
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/ybbQJX?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/ybbQJX?editors=0010)**
 
 After these changes, we're again able to click on the Squares to fill them, the same as we had before. However, now the state is stored in the Board component instead of the individual Square components. When the Board's state changes, the Square components re-render automatically. Keeping the state of all squares in the Board component will allow it to determine the winner in the future.
 
@@ -233,7 +233,7 @@ function Square(props) {
 
 We have changed `this.props` to `props` both times it appears.
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/QvvJOv?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/QvvJOv?editors=0010)**
 
 >When we modified the Square to be a function component, we also changed `onClick={() => this.props.onClick()}` to a shorter `onClick={props.onClick}` (note the lack of parentheses on *both* sides).
 
@@ -336,7 +336,7 @@ class Board extends React.Component {
 }
 ```
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/KmmrBy?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/KmmrBy?editors=0010)**
 
 ### Declaring a Winner
 
@@ -398,6 +398,6 @@ We can now change the Board's `handleClick` function to return early by ignoring
   }
 ```
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/LyyXgK?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/LyyXgK?editors=0010)**
 
 Congratulations! You now have a working tic-tac-toe game. And you've just learned the basics of React too. So *you're* probably the real winner here.

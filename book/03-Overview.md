@@ -107,7 +107,7 @@ After: You should see a number in each square in the rendered output.
 
 ![React Devtools](../images/tutorial/tictac-numbers.png)
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/aWWQOG?editors=0010)**
 
 Congratulations! You've just "passed a prop" from a parent Board component to a child Square component. Passing props is how information flows in React apps, from parents to children.
 
@@ -207,7 +207,7 @@ By calling `this.setState` from an `onClick` handler in the Square's `render` me
 
 When you call `setState` in a component, React automatically updates the child components inside of it too.
 
-**[View the full code at this point](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)**
+**[Open CodePen at this point](https://codepen.io/gaearon/pen/VbbVLg?editors=0010)**
 
 ### Developer Tools
 
