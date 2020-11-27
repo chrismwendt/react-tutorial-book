@@ -60,8 +60,6 @@ Next, we'll have the Board component receive `squares` and `onClick` props from 
 * Replace `this.state.squares[i]` with `this.props.squares[i]` in Board's `renderSquare`.
 * Replace `this.handleClick(i)` with `this.props.onClick(i)` in Board's `renderSquare`.
 
-The Board component now looks like this:
-
 ```commit
 board takes props
 ```
@@ -72,7 +70,7 @@ We'll update the Game component's `render` function to use the most recent histo
 use history
 ```
 
-Since the Game component is now rendering the game's status, we can remove the corresponding code from the Board's `render` method. After refactoring, the Board's `render` function looks like this:
+Since the Game component is now rendering the game's status, we can remove the corresponding code from the Board's `render` method.
 
 ```commit
 clean up board render
@@ -171,7 +169,7 @@ Clicking any of the list item's buttons throws an error because the `jumpTo` met
 
 First, add `stepNumber: 0` to the initial state in Game's `constructor`:
 
-```
+```commit
 add stepNumber
 ```
 
