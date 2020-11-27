@@ -14,11 +14,7 @@ You can now skip the second setup option, and go to the [Overview](#overview) se
 
 This is completely optional and not required for this tutorial!
 
-<br>
-
-<details>
-
-<summary><b>Optional: Instructions for following along locally using your preferred text editor</b></summary>
+**Optional: Instructions for following along locally using your preferred text editor**
 
 This setup requires more work but allows you to complete the tutorial using an editor of your choice. Here are the steps to follow:
 
@@ -40,8 +36,6 @@ set up initial board
 Now you should see an empty tic-tac-toe field.
 
 We recommend following [these instructions](https://babeljs.io/docs/editors/) to configure syntax highlighting for your editor.
-
-</details>
 
 ### Help, I'm Stuck!
 
