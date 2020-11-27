@@ -68,34 +68,8 @@ board takes props
 
 We'll update the Game component's `render` function to use the most recent history entry to determine and display the game's status:
 
-```javascript{2-11,16-19,22}
-  render() {
-    const history = this.state.history;
-    const current = history[history.length - 1];
-    const winner = calculateWinner(current.squares);
-
-    let status;
-    if (winner) {
-      status = 'Winner: ' + winner;
-    } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-    }
-
-    return (
-      <div className="game">
-        <div className="game-board">
-          <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
-        </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{/* TODO */}</ol>
-        </div>
-      </div>
-    );
-  }
+```commit
+use history
 ```
 
 Since the Game component is now rendering the game's status, we can remove the corresponding code from the Board's `render` method. After refactoring, the Board's `render` function looks like this:
