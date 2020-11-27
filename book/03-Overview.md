@@ -98,16 +98,8 @@ Congratulations! You've just "passed a prop" from a parent Board component to a 
 Let's fill the Square component with an "X" when we click it.
 First, change the button tag that is returned from the Square component's `render()` function to this:
 
-```javascript{4}
-class Square extends React.Component {
-  render() {
-    return (
-      <button className="square" onClick={function() { alert('click'); }}>
-        {this.props.value}
-      </button>
-    );
-  }
-}
+```commit
+onClick
 ```
 
 If you click on a Square now, you should see an alert in your browser.
