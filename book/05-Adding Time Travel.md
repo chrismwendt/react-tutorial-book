@@ -193,13 +193,8 @@ update history
 
 Finally, we will modify the Game component's `render` method from always rendering the last move to rendering the currently selected move according to `stepNumber`:
 
-```javascript{3}
-  render() {
-    const history = this.state.history;
-    const current = history[this.state.stepNumber];
-    const winner = calculateWinner(current.squares);
-
-    // the rest has not changed
+```commit
+render current move
 ```
 
 If we click on any step in the game's history, the tic-tac-toe board should immediately update to show what the board looked like after that step occurred.
